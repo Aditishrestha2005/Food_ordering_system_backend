@@ -4,6 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const sequelize = require("./Database/db");
 const userRoute = require("./routes/userRoute");
+const productRoute = require("./routes/productRoute")
 
 //creating a server
 const app = express();
@@ -11,13 +12,21 @@ const app = express();
 //creating a port
 const PORT = 5000;
 
+
 //creating a middleware
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Running on PORT
+// app.listen(PORT, () => {
+//   console.log(`Server Running on PORT ${PORT}`);
+// });
+ 
 // Routes
 app.use('/user', userRoute);
+
+app.use('/product',productRoute);
 
 // Database sync and server startup
 sequelize.sync()
