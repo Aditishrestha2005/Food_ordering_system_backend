@@ -10,7 +10,7 @@ const productRoute = require("./routes/productRoute")
 const app = express();
 
 //creating a port
-const PORT = 5000;
+const PORT = 3000;
 
 
 //creating a middleware
