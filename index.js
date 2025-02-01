@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const sequelize = require("./Database/db");
 const userRoute = require("./routes/userRoute");
 const productRoute = require("./routes/productRoute")
+const orderRoute = require("./routes/orderRoute");
 
 //creating a server
 const app = express();
@@ -27,6 +28,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/user', userRoute);
 
 app.use('/product',productRoute);
+app.use('/order',orderRoute);
+
+
 
 // Database sync and server startup
 sequelize.sync()
