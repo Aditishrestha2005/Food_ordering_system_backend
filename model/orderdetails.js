@@ -3,7 +3,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 
 const sequelize = require('../Database/db');
 
-const OrderDetail = sequelize.define('OrderDetail', {
+const orderdetail = sequelize.define('OrderDetails', {
     Order_detail_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -17,7 +17,7 @@ const OrderDetail = sequelize.define('OrderDetail', {
             key: 'Order_ID'
         }
     },
-    Menu_id: {
+    Product_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
@@ -29,7 +29,7 @@ const OrderDetail = sequelize.define('OrderDetail', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    Subtotal: {
+    Price: {
         type: DataTypes.FLOAT,
         allowNull: false
     }

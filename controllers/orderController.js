@@ -7,7 +7,7 @@ const createOrder = async (req, res) => {
 
     const order = await Order.create({
       Customer_id,
-      Restaurant_id,
+      Restaurant_id,// always uses 1
       Order_date,
       Total_amount,
       Order_status,
