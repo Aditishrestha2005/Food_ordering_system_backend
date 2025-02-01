@@ -6,6 +6,9 @@ const sequelize = require("./Database/db");
 const userRoute = require("./routes/userRoute");
 const productRoute = require("./routes/productRoute")
 const orderRoute = require("./routes/orderRoute");
+const orderdetailsRoute=require("./routes/orderdetailsRoute")
+const paymentRoute=require("./routes/paymentRoute")
+const restaurantRoute=require('./routes/restaurantRoute')
 
 //creating a server
 const app = express();
@@ -29,6 +32,10 @@ app.use('/user', userRoute);
 
 app.use('/product',productRoute);
 app.use('/order',orderRoute);
+app.use('/orderdetails',orderdetailsRoute);
+app.use('/payment',paymentRoute)
+app.use('/restaurant',restaurantRoute)
+
 
 
 

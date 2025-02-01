@@ -1,12 +1,21 @@
 const express= require('express')
 const router = express.Router();
 
-const restaurantController = require('../controller/restaurantController') 
-router.post('/create_test',restaurantController.createTest);
-router.get('/show_test',restaurantController.getTest);
+const restaurantController = require('../controllers/restaurantController') 
 
-router.put('/:id', restaurantController.updateUser);
-router.delete('/:id', restaurantController.deleteUser);
+
+router.post('/create', restaurantController.createRestaurant);
+
+
+router.get('/', restaurantController.getAllRestaurants);
+
+router.get('/:id',restaurantController.getRestaurantById);
+
+
+router.put('/:id', restaurantController.updateRestaurant);
+
+
+router.delete('/:id', restaurantController.deleteRestaurant);
  
 module.exports=router;
 
