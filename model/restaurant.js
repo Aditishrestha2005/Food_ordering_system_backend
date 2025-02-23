@@ -5,7 +5,7 @@ const sequelize = require('../Database/db');
 
 
 const Resturant = sequelize.define('Resturant',{
-    Restaurant_id: {
+    Resturant_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true

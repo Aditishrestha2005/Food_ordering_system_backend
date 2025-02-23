@@ -4,7 +4,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../Database/db');
 
 const OrderDetail = sequelize.define('OrderDetails', {
-    Order_detail_id: {
+    OrderDetail_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
